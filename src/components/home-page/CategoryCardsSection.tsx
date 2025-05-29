@@ -1,23 +1,26 @@
+import Image from "next/image";
+import heroImage from "../../../public/img/img-header.webp";
+
 const categories = [
   {
     id: 1,
     name: "Running",
-    image: "",
+    image: heroImage,
   },
   {
     id: 2,
     name: "Training",
-    image: "",
+    image: heroImage,
   },
   {
     id: 3,
     name: "Basketball",
-    image: "",
+    image: heroImage,
   },
   {
     id: 4,
     name: "Fútbol",
-    image: "",
+    image: heroImage,
   },
 ];
 
@@ -25,7 +28,7 @@ export function CategoryCardsSection() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-3xl text-gray-500 font-bold text-center mb-12">
           Compra por categoría
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-fadeIn">
@@ -35,7 +38,9 @@ export function CategoryCardsSection() {
               className="relative rounded-lg overflow-hidden shadow-md group cursor-pointer"
             >
               <div className="h-64 overflow-hidden">
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src={category.image}
                   alt={category.name}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"

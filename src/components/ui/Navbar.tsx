@@ -53,7 +53,7 @@ export function Navbar() {
             <Link
               key={name}
               href={to}
-              className="text-gray-700 hover:text-blue-600"
+              className="text-gray-700 hover:text-blue-600 transition-transform duration-300 hover:scale-110"
             >
               {name}
             </Link>
@@ -69,7 +69,7 @@ export function Navbar() {
             <input
               type="text"
               placeholder="Buscar..."
-              className="w-full py-2 pl-10 pr-4 text-sm border-none rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+              className="w-full py-2 pl-10 pr-4 text-sm border-none rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 placeholder:text-gray-500 text-gray-500"
               onFocus={() => setSearchFocused(true)}
               onBlur={() => setSearchFocused(false)}
             />
